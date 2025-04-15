@@ -98,7 +98,7 @@ const port = process.env.PORT || 5500; //port on server is listening
 
 
 
-const db_url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hyperstream.9sbxaff.mongodb.net/?retryWrites=true&w=majority`
+const db_url = `mongodb+srv://hyperstream_db_engineer:Gnpd6q6SVvHkrkGz@hyperstream.9sbxaff.mongodb.net/?retryWrites=true&w=majority`
 mongoose.connect(db_url, {
   dbName: process.env.DB_NAME,
 })
