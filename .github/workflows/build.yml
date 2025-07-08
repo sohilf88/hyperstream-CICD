@@ -1,0 +1,19 @@
+name: build sample project
+on: [push, workflow_dispatch]
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout first of all
+              uses: actions/checkout@v4
+            - name: install node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 22.15.0
+                check-latest: true
+            - name: check latest version
+              run: node -v
+            - name: install depedencies
+              run: npm ci
+
+
